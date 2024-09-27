@@ -58,3 +58,7 @@ void MyVector<T>::resize(size_t new_capacity) {
   _data = new_data;
   _capacity = new_capacity;
 }
+
+
+// -------------------- Specific instantations
+template class MyVector<int>;
