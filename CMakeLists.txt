@@ -23,9 +23,8 @@ add_library(my_vector src/my_vector.cpp)
 # -------------------- Testing
 enable_testing()
 
-add_executable(run_unit_tests test/my_vector.cpp)
-target_link_libraries(run_unit_tests GTest::gtest_main)
-target_link_libraries(run_unit_tests my_vector)
+add_executable(run_unit_tests test/my_vector.cpp test/my_vector_resize.cpp)
+target_link_libraries(run_unit_tests GTest::gtest_main my_vector)
 
 include(GoogleTest)
 gtest_discover_tests(run_unit_tests)
