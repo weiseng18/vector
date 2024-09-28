@@ -28,9 +28,12 @@ TEST_F(MyVectorResizeTest, HalveCapacityWhenQuarterFull) {
   EXPECT_EQ(vec.size(), 4);
   EXPECT_EQ(vec.capacity(), 4);
 
-  vec.pop_back();
-  vec.pop_back();
-  vec.pop_back();
+  // After running pop_back() 3 times,
+  // vec.size() should be 1 and vec.capacity() should be 4,
+  // triggering the resize.
+  for (int i = 0; i < 3; i++) {
+    vec.pop_back();
+  }
 
   EXPECT_EQ(vec.size(), 1);
   EXPECT_EQ(vec.capacity(), 2);
