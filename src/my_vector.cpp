@@ -16,6 +16,12 @@ size_t MyVector<T>::size() const {
   return _size;
 }
 
+// Returns the capacity of the vector.
+template <typename T>
+size_t MyVector<T>::capacity() const {
+  return _capacity;
+}
+
 // Adds an element to the end of the vector.
 template <typename T>
 void MyVector<T>::push_back(const T& value) {

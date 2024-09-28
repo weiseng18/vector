@@ -10,11 +10,13 @@ public:
   ~MyVector();
 
   size_t size() const;
+  size_t capacity() const;
 
   void push_back(const T& value);
   void pop_back();
 
   T& operator[](size_t index);
+
 
 private:
   T* _data;
