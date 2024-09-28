@@ -24,3 +24,11 @@ TEST_F(MyVectorTest, PushBackOnNonemptyVector) {
   vec.push_back(2);
   EXPECT_EQ(vec.size(), 2);
 }
+
+TEST_F(MyVectorTest, PopBackOnNonemptyVector) {
+  vec.push_back(1);
+  EXPECT_EQ(vec.size(), 1);
+
+  vec.pop_back();
+  EXPECT_EQ(vec.size(), 0);
+}
